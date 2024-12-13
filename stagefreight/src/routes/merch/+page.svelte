@@ -1,58 +1,7 @@
 <style>
   /* Cart Styling */
-  .cart {
-    position: fixed; 
-    top: 150px; 
-    right: 0;
-    width: 320px;
-    height: auto;
-    max-height: 70vh;
-    background-color: #2d3748; 
-    padding: 16px;
-    overflow-y: auto;
-    z-index: 50;
-    color: white;
-  }
-  
-  .cart h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-  }
 
-  .cart ul {
-    list-style-type: none;
-    padding: 0;
-  }
 
-  .cart li {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-  }
-
-  .cart button {
-    width: 100%;
-    padding: 12px;
-    background-color: #3182ce; /* bg-blue-500 */
-    color: white;
-    font-weight: 600;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-  }
-
-  .cart button:hover {
-    background-color: #2b6cb0; 
-  }
-
-  /* Footer Styling */
-  footer {
-    margin-top: 80px; 
-    background-color: #1a202c; 
-    padding: 20px 0;
-    text-align: center;
-    color: white;
-  }
 </style>
 
 <script>
