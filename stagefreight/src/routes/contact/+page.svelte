@@ -13,7 +13,7 @@
 <section class="bg-black text-white py-16">
   
   <div class="container mx-auto px-4">
-    <h2 class="text-6xl font-extrabold text-center text-green-400 mb-12 mt-12">CONTACT US</h2>
+    <h2 class="text-6xl font-bold text-center text-green-500 my-12">CONTACT US</h2>
     <p class="text-lg text-center mb-8 text-gray-300">Have a question? Want to book Stage Fright for an event? Reach out to us using the form below or find other ways to get in touch.</p>
 
     <!-- Contact Information Section -->
