@@ -37,7 +37,9 @@
       <a href="/" class="flex items-center space-x-2">
         <img src="/images/logo.png" alt="Stage Fright Logo" class="h-12" />
       </a>
-      <p>&copy; 2024 Stage Fright. All rights reserved.</p>
+      <p>BPA 435 Website Design Team | STAGEFRIGHT | Plano West Senior High School</p>
+      <p>Rishabh Singh | Plano, TX 2024</p>
+
   </footer>
 
 </section>  
