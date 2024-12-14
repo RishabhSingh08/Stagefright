@@ -51,6 +51,7 @@
 
 
 <section class="bg-black text-white py-16">
+
   <div class="container mx-auto px-4">
     <h2 class="text-4xl md:text-6xl font-bold text-center text-red-500 my-12">CONTACT US</h2>
     <p class="text-lg text-center mb-8 text-zinc-300">
@@ -147,7 +148,7 @@
         </div>
                 <div>
           <p class="font-semibold text-red-500">4. How can I speak to customer service?</p>
-          <p class="text-lg text-zinc-300">You can speak with us via the form above, our email at <span class="text-red-500">contact@stagefrightband.com</span>, or using our customer support link <span class="text-red-500"><a href="https://www.gigsalad.com/Music-Groups/Party-Band" class="underline">Here</a></span></p>
+          <p class="text-lg text-zinc-300">You can speak with us via the form above, our email at <span class="text-red-500">contact@stagefrightband.com</span>, or using our customer support link <span class="text-red-500"><a href="https://www.gigsalad.com/Music-Groups/Party-Band" class="underline">Here</a></span>.</p>
         </div>
       </div>
     </div>
