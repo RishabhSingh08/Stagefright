@@ -6,10 +6,15 @@
   const toggleMenu = () => {
     menuVisible = !menuVisible;
   };
+
+  const closeMenu = () => {
+    menuVisible = false;
+  };
 </script>
 
 <style>
-  .nav-link {
+    @media (min-width: 1024px){
+        .nav-link {
     position: relative;
     color: white;
     text-decoration: none;
@@ -20,13 +25,31 @@
     padding: 0.5rem 0;
   }
 
+  /* Hover effect for nav-link */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: rgb(220 38 38);
+    transition: width 0.3s ease;
+  }
+
   .nav-link:hover {
     color: rgb(220 38 38);
   }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+    }
+
 </style>
 
 <nav class="fixed top-0 left-0 w-full bg-black text-white shadow-md z-50 border-b border-white">
-  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+  <div class="container mx-auto px-4 py-2 flex justify-between items-center">
     <div class="flex items-center space-x-4">
       <!-- Logo -->
       <a href="/" class="flex items-center space-x-2">
@@ -52,10 +75,10 @@
   </div>
   <!-- Mobile menu dropdown -->
   {#if menuVisible}
-    <div class="bg-black text-white flex flex-col px-4 space-y-2 lg:hidden border-t border-white">
-      <a href="/tour" class="nav-link border-b border-white">Tour</a>
-      <a href="/merch" class="nav-link border-b border-white">Merch</a>
-      <a href="/contact" class="nav-link ">Contact</a>
+    <div class="bg-black text-white flex flex-col px-4 space-y-2 lg:hidden border-t border-white py-2">
+      <a href="/tour" class="nav-link border-b border-zinc-700  py-2" on:click={closeMenu}>Tour</a>
+      <a href="/merch" class="nav-link border-b border-zinc-700  py-2" on:click={closeMenu}>Merch</a>
+      <a href="/contact" class="nav-link py-2" on:click={closeMenu}>Contact</a>
     </div>
   {/if}
 </nav>
