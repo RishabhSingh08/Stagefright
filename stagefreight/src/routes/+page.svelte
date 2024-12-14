@@ -65,8 +65,6 @@
     scale: .7;
   }
 
-  .memberCard{
-  }
   
   }
 </style>
@@ -94,26 +92,26 @@
 
 <section id="about" class="bg-black text-white py-8 sm:py-12 lg:py-16">
   <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       {#each members as member}
         <div
-          class="memberCard bg-zinc-900 p-4 sm:p-6 rounded-lg shadow-lg text-center transform transition-transform hover:scale-105 hover:shadow-xl hover:border-2 hover:border-red-500 cursor-pointer"
+          class="memberCard bg-gradient-to-br from-zinc-800 to-zinc-900 p-6 rounded-lg shadow-lg border border-zinc-700 text-center transform transition-transform hover:scale-105 hover:shadow-2xl hover:border-red-500 cursor-pointer"
           on:click={() => openModal(member)}
         >
           <img
             src={member.image}
             alt={member.name}
-            class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full mx-auto mb-4 object-cover"
+            class="w-28 h-28 md:w-32 md:h-32 rounded-full mx-auto mb-4 object-cover border-4 border-zinc-700"
           />
-          <h3 class="text-sm sm:text-base md:text-lg font-semibold text-red-500">{member.name}</h3>
-          <p class="text-xs sm:text-sm md:text-base text-zinc-400">{member.role}</p>
+          <h3 class="text-lg font-semibold text-red-500">{member.name}</h3>
+          <p class="text-sm text-zinc-400">{member.role}</p>
         </div>
       {/each}
     </div>
-    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-red-500 mb-6 sm:mb-8 mt-8 sm:mt-12 lg:mt-16">
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-red-500 my-12">
       About Stage Fright
     </h2>
-    <p class="text-sm sm:text-base lg:text-lg mb-4 sm:mb-8 text-center">
+    <p class="text-base lg:text-lg text-center text-zinc-300 leading-relaxed max-w-3xl mx-auto">
       Stage Fright was born in a small garage in Austin, TX, where Alex and Ethan first began
       jamming together after school. What started as casual practice sessions quickly became a vision for something bigger. 
       The duo soon connected with Mia and Jenna through mutual friends, and their chemistry was instant. 
@@ -124,27 +122,38 @@
 </section>
 
 {#if selectedMember}
-  <div class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4">
-    <div class="bg-zinc-900 text-white p-6 sm:p-8 rounded-lg shadow-lg max-w-lg w-full">
-      <div class="flex justify-between items-center mb-4">
-        <h2 class="text-lg sm:text-xl lg:text-2xl font-bold text-red-500">{selectedMember.name}</h2>
-        <button
-          on:click={closeModal}
-          class="text-lg sm:text-xl text-zinc-400 hover:text-white transition"
-        >
-          &times;
-        </button>
-      </div>
+  <div class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 px-4">
+    <div class="bg-gradient-to-t from-zinc-800 to-zinc-900 p-8 sm:p-10 rounded-xl shadow-xl max-w-lg w-full relative border border-zinc-700">
+      <!-- Close button -->
+      <button
+        on:click={closeModal}
+        class="absolute top-3 right-3 text-2xl text-zinc-400 hover:text-white transition transform hover:scale-110"
+      >
+        &times;
+      </button>
+      
+      <!-- Modal Content -->
       <div class="text-center">
         <img
           src={selectedMember.image}
           alt={selectedMember.name}
-          class="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full mx-auto mb-4 object-cover border-4 border-red-500"
+          class="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full mx-auto mb-6 object-cover border-4 border-red-500 shadow-md"
         />
-        <h3 class="text-sm sm:text-base md:text-lg font-semibold text-red-500">
-          {selectedMember.role}
-        </h3>
-        <p class="text-xs sm:text-sm md:text-base mt-4 text-zinc-300">{selectedMember.bio}</p>
+        <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-red-500">{selectedMember.name}</h2>
+        <h3 class="text-sm sm:text-base text-zinc-400 mt-2">{selectedMember.role}</h3>
+        <p class="text-sm sm:text-base text-zinc-300 mt-4 leading-relaxed">
+          {selectedMember.bio}
+        </p>
+      </div>
+      
+      <!-- Decorative Buttons -->
+      <div class="mt-6 flex justify-center space-x-4">
+        <button class="px-4 py-2 bg-red-500 text-white rounded-md shadow-md hover:bg-red-600 transition">
+          View Profile
+        </button>
+        <button on:click={closeModal} class="px-4 py-2 bg-zinc-700 text-white rounded-md shadow-md hover:bg-zinc-600 transition">
+          Close
+        </button>
       </div>
     </div>
   </div>
