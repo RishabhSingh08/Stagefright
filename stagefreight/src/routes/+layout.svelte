@@ -3,6 +3,35 @@
 <!-- <header class="bg-black text-white p-4">
 </header> -->
 <!-- src/routes/+layout.svelte -->
+<style>
+  .nav-link {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: rgb(220 38 38);
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+</style>
 
 <head>
   <!-- index.html -->
@@ -19,13 +48,15 @@
       </a>
     </div>
     <div class="space-x-6">
-      <!-- Removed the Home button -->
-      <a href="/tour" class="hover:text-gray-400">Tour</a>
-      <a href="/merch" class="hover:text-gray-400">Merch</a>
-      <a href="/contact" class="hover:text-gray-400">Contact</a>
+      <!-- Animated underline on hover -->
+      <a href="/tour" class="nav-link">Tour</a>
+      <a href="/merch" class="nav-link">Merch</a>
+      <a href="/contact" class="nav-link">Contact</a>
     </div>
   </div>
 </nav>
+
+
 
 <main>
   <slot />

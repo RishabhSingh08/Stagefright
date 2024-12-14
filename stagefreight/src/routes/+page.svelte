@@ -70,7 +70,7 @@
     </div>
   </div>
 <div class="absolute inset-0 flex items-center justify-center text-center text-white z-10">
-  <div class="p-6 bg-black bg-opacity-75 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:border-4 hover:border-green-400 hover:ring-2 hover:ring-green-400">
+  <div class="p-6 bg-black bg-opacity-75 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:border-4 hover:border-red-800">
     <img src="/images/logo.png" alt="Stage Fright Logo" class="h-56 mx-auto" />
     <p class="mt-2 mb-2 text-xl font-medium text-gray-300 uppercase">Rocking the world with fresh sounds and energy-packed performances</p>
   </div>
@@ -83,7 +83,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {#each members as member}
         <div
-          class="bg-gray-900 p-6 rounded-lg shadow-lg text-center transform transition-transform hover:scale-105 hover:shadow-xl hover:border-2 hover:border-green-400 cursor-pointer"
+          class="bg-gray-900 p-6 rounded-lg shadow-lg text-center transform transition-transform hover:scale-105 hover:shadow-xl hover:border-2 hover:border-red-400 cursor-pointer"
           on:click={() => openModal(member)}
         >
           <img
@@ -91,12 +91,12 @@
             alt={member.name}
             class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
           />
-          <h3 class="text-xl font-semibold text-green-400">{member.name}</h3>
+          <h3 class="text-xl font-semibold text-red-400">{member.name}</h3>
           <p class="text-sm text-gray-400">{member.role}</p>
         </div>
       {/each}
     </div>
-    <h2 class="text-3xl font-bold text-center text-green-400 mb-8 mt-16">About Stage Fright</h2>
+    <h2 class="text-3xl font-bold text-center text-red-400 mb-8 mt-16">About Stage Fright</h2>
     <p class="text-lg mb-8 text-center">Stage Fright was born in a small garage in Austin, TX, where Alex and Ethan first began jamming together after school.<br><br>What started as casual practice sessions quickly became a vision for something bigger. The duo soon connected with Mia and Jenna through mutual friends, and their chemistry was instant.<br><br>United by a shared love for rock and an ambition to create something fresh and authentic, the band started writing and performing original songs at local gigs. Over time, their energy-packed performances and heartfelt lyrics captured the attention of fans and critics alike.<br><br>Today, Stage Fright is on a mission to bring their music to stages everywhere, blending classic rock influences with a modern twist. Each member brings their own unique flair to the group, making Stage Fright a band that stands out and leaves a lasting impression.
   </div>
 </section>
@@ -105,7 +105,7 @@
   <div class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 mt-8">
     <div class="bg-gray-900 text-white p-8 rounded-lg shadow-lg max-w-lg w-full">
       <div class="flex justify-between items-center mb-4">
-        <h2 class="text-2xl font-bold text-green-400">{selectedMember.name}</h2>
+        <h2 class="text-2xl font-bold text-red-400">{selectedMember.name}</h2>
         <button
           on:click={closeModal}
           class="text-xl text-gray-400 hover:text-white transition"
@@ -117,9 +117,9 @@
         <img
           src={selectedMember.image}
           alt={selectedMember.name}
-          class="w-48 h-48 rounded-full mx-auto mb-4 object-cover border-4 border-green-400"
+          class="w-48 h-48 rounded-full mx-auto mb-4 object-cover border-4 border-red-400"
         />
-        <h3 class="text-xl font-semibold text-green-400">{selectedMember.role}</h3>
+        <h3 class="text-xl font-semibold text-red-400">{selectedMember.role}</h3>
         <p class="text-lg mt-4 text-gray-300">{selectedMember.bio}</p>
       </div>
     </div>
