@@ -3,7 +3,6 @@
   import { browser } from '$app/environment';
 
   // Shopping cart store to hold the cart data
-  const cart = writable([]);
 
   // Product data
   const products = [
@@ -56,6 +55,7 @@
       sizes: ["S", "M", "L"]
     }
   ];
+  const cart = writable([]);
 
   // Handle adding item to cart
   const addToCart = (product, size) => {
@@ -71,9 +71,7 @@
   };
 
   // Handle checkout
-  const checkout = () => {
-    alert("CHECKOUT");
-  };
+
 
   let showModal = false;
   let selectedProduct = null;
@@ -93,7 +91,16 @@
       localStorage.setItem('cart', JSON.stringify(items));
     }
   });
+
+    const checkout = () => {
+  const total = $cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
+  alert("Checked Out!\nTotal: $" + total);
+  cart.set([]);
+  };
 </script>
+
+
+
 
 <section class="relative bg-black text-white py-12 sm:py-8">
   <div class="absolute inset-0">
@@ -103,7 +110,7 @@
   <div class="relative container mx-auto px-4 sm:px-2 py-12 sm:py-8 flex flex-col md:grid md:grid-cols-12 gap-8">
     <!-- Merchandise Content -->
     <div class="order-1 md:order-none col-span-8">
-      <h2 class="text-6xl sm:text-4xl font-bold text-center text-red-500 mb-12 sm:mb-8">MERCH</h2>
+    <h2 class="text-6xl font-bold text-center text-red-500 mt-12 mb-6">MERCH</h2>
       <p class="text-lg sm:text-base text-center mb-8 sm:mb-6">Get your official Stage Fright gear! All items are limited edition, so act fast!</p>
       <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-4">
         {#each products as product}
