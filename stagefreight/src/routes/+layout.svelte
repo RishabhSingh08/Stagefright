@@ -5,16 +5,8 @@
 
   const toggleMenu = () => {
     menuVisible = !menuVisible;
-    const menu = document.getElementById("menu");
-
-    if (menuVisible) {
-      menu.classList.remove("hidden");
-    } else {
-      menu.classList.add("hidden");
-    }
   };
 </script>
-
 
 <style>
   .nav-link {
@@ -24,25 +16,12 @@
     font-size: 1rem;
     font-weight: bold;
     transition: color 0.3s ease;
+    display: block;
+    padding: 0.5rem 0;
   }
 
   .nav-link:hover {
     color: rgb(220 38 38);
-  }
-
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: red;
-    transition: width 0.3s ease;
-  }
-
-  .nav-link:hover::after {
-    width: 100%;
   }
 </style>
 
@@ -55,18 +34,30 @@
       </a>
     </div>
     <!-- Hamburger menu for mobile -->
-    <button id="menu-toggle" class="block lg:hidden text-white focus:outline-none">
+    <button
+      id="menu-toggle"
+      class="block lg:hidden text-white focus:outline-none"
+      on:click={toggleMenu}
+    >
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
       </svg>
     </button>
-    <div id="menu" class="hidden lg:flex lg:space-x-6 lg:items-center">
-      <!-- Links -->
+    <!-- Desktop menu -->
+    <div class="hidden lg:flex lg:space-x-6 lg:items-center">
       <a href="/tour" class="nav-link">Tour</a>
       <a href="/merch" class="nav-link">Merch</a>
       <a href="/contact" class="nav-link">Contact</a>
     </div>
   </div>
+  <!-- Mobile menu dropdown -->
+  {#if menuVisible}
+    <div class="bg-black text-white flex flex-col px-4 space-y-2 lg:hidden">
+      <a href="/tour" class="nav-link border-b border-white">Tour</a>
+      <a href="/merch" class="nav-link border-b border-white">Merch</a>
+      <a href="/contact" class="nav-link ">Contact</a>
+    </div>
+  {/if}
 </nav>
 
 <main>
