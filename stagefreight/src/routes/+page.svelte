@@ -4,7 +4,7 @@
       name: "Alex Carter",
       role: "Lead Vocals and Rhythm Guitar",
       bio: "Alex Carter, born and raised in Austin, TX, is the dynamic lead vocalist and rhythm guitarist of Stage Fright. Growing up in a musically rich environment, Alex was introduced to the world of music at a young age, learning guitar from his father, who was a local blues musician. Over the years, Alex has honed his skills, blending his love for classic rock with modern influences. Known for his powerful voice and energetic stage presence, Alex's passion for songwriting and performing is the heart of Stage Fright's sound. He is currently based in Portland, OR, where he continues to shape the band's direction with his creative input.",
-      image: "https://xsgames.co/randomusers/assets/avatars/male/2.jpg"
+      image: "https://xsgames.co/randomusers/assets/avatars/male/20.jpg"
     },
     {
       name: "Mia Torres",
@@ -16,7 +16,7 @@
       name: "Ethan Brooks",
       role: "Bass Guitar",
       bio: "Ethan Brooks, originally from Seattle, WA, is the solid backbone of Stage Fright as the bass guitarist. With a deep passion for music that started in his teenage years, Ethan initially picked up the guitar before transitioning to bass, where he found his true calling. After relocating to Portland, OR, Ethan met Alex and began jamming, which led to the formation of Stage Fright. Known for his steady grooves and melodic basslines, Ethan's contributions are integral to the band's sound, adding depth and rhythm that anchor their music. Ethan is also a songwriter and often contributes to the band’s original compositions, adding his own unique flavor to the mix.",
-      image: "https://xsgames.co/randomusers/assets/avatars/male/7.jpg"
+      image: "https://xsgames.co/randomusers/assets/avatars/male/10.jpg"
     },
     {
       name: "Jenna Patel",
@@ -84,7 +84,7 @@
   <div class="absolute inset-0 flex items-center justify-center text-center text-white z-10 px-4">
     <div class="aboutCard p-4  bg-black bg-opacity-75 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:border-4 hover:border-red-800 mt-4 ">
       <img src="/images/logo.png" alt="Stage Fright Logo" class=" h-24 sm:h-32 md:h-40 mx-auto" />
-      <p class="mt-2 mb-2 text-sm sm:text-base md:text-xl font-medium text-zinc-300 uppercase">
+      <p class="mt-2 text-sm sm:text-base md:text-xl font-medium text-zinc-300 uppercase">
         Rocking the world with fresh sounds and energy-packed performances
       </p>
     </div>
