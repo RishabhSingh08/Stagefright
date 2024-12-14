@@ -102,7 +102,7 @@
 
 
 
-<section class="relative bg-black text-white py-12 sm:py-8">
+<section class="relative bg-black text-white py-12 sm:py-8 mt-12">
   <div class="absolute inset-0">
     <img src="/images/band1.png" alt="Tour Hero Image" class="object-cover w-full h-full opacity-30" />
   </div>
@@ -110,7 +110,7 @@
   <div class="relative container mx-auto px-4 sm:px-2 py-12 sm:py-8 flex flex-col md:grid md:grid-cols-12 gap-8">
     <!-- Merchandise Content -->
     <div class="order-1 md:order-none col-span-8">
-    <h2 class="text-6xl font-bold text-center text-red-500 mt-12 mb-6">MERCH</h2>
+    <h2 class="text-6xl font-bold text-center text-red-500  mb-6">MERCH</h2>
       <p class="text-lg sm:text-base text-center mb-8 sm:mb-6">Get your official Stage Fright gear! All items are limited edition, so act fast!</p>
       <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-4">
         {#each products as product}
