@@ -145,6 +145,10 @@
           <p class="font-semibold text-red-500">3. How can I get updates on upcoming shows?</p>
           <p class="text-lg text-zinc-300">Follow us on social media or subscribe to our newsletter to stay updated on our latest tours and events.</p>
         </div>
+                <div>
+          <p class="font-semibold text-red-500">4. How can I speak to customer service?</p>
+          <p class="text-lg text-zinc-300">You can speak with us via the form above, our email at <span class="text-red-500">contact@stagefrightband.com</span>, or using our customer support link <span class="text-red-500"><a href="https://www.gigsalad.com/Music-Groups/Party-Band" class="underline">Here</a></span></p>
+        </div>
       </div>
     </div>
   </div>
