@@ -135,7 +135,7 @@
       <div class="space-y-6">
         <div>
           <p class="font-semibold text-red-500">1. How do I book Stage Fright for an event?</p>
-          <p class="text-lg text-zinc-300">You can book Stage Fright by contacting us via the form above or emailing us directly at <span class="text-red-500">contact@stagefrightband.com</span>.</p>
+          <p class="text-lg text-zinc-300">You can book Stage Fright by contacting us via the form above or visiting us directly <span class="text-red-500"><a href="https://www.gigsalad.com/Music-Groups/Party-Band" class="underline">Here</a></span>.</p>
         </div>
         <div>
           <p class="font-semibold text-red-500">2. What merchandise do you offer?</p>

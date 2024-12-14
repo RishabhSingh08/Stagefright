@@ -4,56 +4,56 @@
       date: "January 20, 2024",
       city: "Austin, TX",
       venue: "The Troubadour",
-      ticketUrl: "https://example.com/tickets/austin",
+      ticketUrl: "https://www.ticketmaster.com/discover/concerts/austin",
       details: "Join us for an unforgettable night in the heart of Austin. Expect high energy and new tracks!"
     },
     {
       date: "February 10, 2024",
       city: "Los Angeles, CA",
       venue: "The Roxy Theatre",
-      ticketUrl: "https://example.com/tickets/losangeles",
+      ticketUrl: "https://www.ticketmaster.com/discover/concerts/losangeles",
       details: "Stage Fright returns to LA! With special guests and new music, this show will be a blast."
     },
     {
       date: "March 5, 2024",
       city: "New York, NY",
       venue: "Madison Square Garden",
-      ticketUrl: "https://example.com/tickets/newyork",
+      ticketUrl: "https://www.ticketmaster.com/discover/concerts/newyork",
       details: "The big stage in New York awaits! Come experience Stage Fright live at one of the most iconic venues in the world."
     },
     {
       date: "April 10, 2024",
       city: "Chicago, IL",
       venue: "House of Blues",
-      ticketUrl: "https://example.com/tickets/chicago",
+      ticketUrl: "https://www.ticketmaster.com/discover/concerts/chicago",
       details: "Get ready for a rockin' night in Chicago with Stage Fright, at the legendary House of Blues!"
     },
     {
       date: "May 15, 2024",
       city: "San Francisco, CA",
       venue: "The Fillmore",
-      ticketUrl: "https://example.com/tickets/sanfrancisco",
+      ticketUrl: "https://www.ticketmaster.com/discover/concerts/sanfrancisco",
       details: "Stage Fright brings their electrifying live show to the Fillmore. You won't want to miss this one!"
     },
     {
       date: "June 22, 2024",
       city: "Nashville, TN",
       venue: "The Basement East",
-      ticketUrl: "https://example.com/tickets/nashville",
+      ticketUrl: "https://www.ticketmaster.com/discover/concerts/nashville",
       details: "Nashville, get ready for a night of high-energy rock with Stage Fright. Expect surprises and an unforgettable atmosphere!"
     },
     {
       date: "July 30, 2024",
       city: "Seattle, WA",
       venue: "Neumos",
-      ticketUrl: "https://example.com/tickets/seattle",
+      ticketUrl: "https://www.ticketmaster.com/discover/concerts/seattle",
       details: "Stage Fright hits the Pacific Northwest for an intense performance at Neumos. Be there to rock out!"
     },
     {
       date: "August 14, 2024",
       city: "Denver, CO",
       venue: "Bluebird Theater",
-      ticketUrl: "https://example.com/tickets/denver",
+      ticketUrl: "https://www.ticketmaster.com/discover/concerts/denver",
       details: "Stage Fright takes the stage at Denver's iconic Bluebird Theater. Get ready for a night of unforgettable music!"
     },
     // Add more events as necessary
