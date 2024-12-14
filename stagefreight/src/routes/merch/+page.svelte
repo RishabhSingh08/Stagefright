@@ -100,9 +100,9 @@
     <img src="/images/band1.png" alt="Tour Hero Image" class="object-cover w-full h-full opacity-30" />
   </div>
 
-  <div class="relative container mx-auto px-4 py-12 grid grid-cols-12 gap-8">
+  <div class="relative container mx-auto px-4 py-12 flex flex-col md:grid md:grid-cols-12 gap-8">
     <!-- Merchandise Content -->
-    <div class="col-span-8">
+    <div class="order-1 md:order-none col-span-8">
       <h2 class="text-6xl font-bold text-center text-red-500 mb-12">MERCHANDISE</h2>
       <p class="text-lg text-center mb-8">Get your official Stage Fright gear! All items are limited edition, so act fast!</p>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -121,8 +121,8 @@
       </div>
     </div>
 
-    <!-- Cart Sidebar -->
-    <div class="col-span-4 bg-gray-900 text-white p-6 shadow-xl rounded-lg overflow-y-auto">
+    <!-- Cart Section -->
+    <div class="order-2 md:order-none col-span-4 bg-gray-900 text-white p-6 shadow-xl rounded-lg overflow-y-auto">
       <h3 class="text-2xl font-semibold text-red-500 mb-6 text-center">Your Cart</h3>
       {#if $cart.length > 0}
         <ul class="space-y-4">

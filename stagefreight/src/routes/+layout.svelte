@@ -52,7 +52,7 @@
   </div>
   <!-- Mobile menu dropdown -->
   {#if menuVisible}
-    <div class="bg-black text-white flex flex-col px-4 space-y-2 lg:hidden">
+    <div class="bg-black text-white flex flex-col px-4 space-y-2 lg:hidden border-t border-white">
       <a href="/tour" class="nav-link border-b border-white">Tour</a>
       <a href="/merch" class="nav-link border-b border-white">Merch</a>
       <a href="/contact" class="nav-link ">Contact</a>
