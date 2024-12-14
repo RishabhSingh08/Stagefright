@@ -74,10 +74,10 @@
     <p class="text-xl text-center mb-12">Catch us live at one of these upcoming shows! Get your tickets today.</p>
 
     <!-- Highlighted Upcoming Show -->
-    <div class="bg-gray-900 p-8 rounded-lg shadow-lg mb-12 border border-red-500">
+    <div class="bg-zinc-900 p-8 rounded-lg shadow-lg mb-12 border border-red-500">
       <h3 class="text-4xl font-semibold text-center text-red-400">{tourDates[0].city}</h3>
-      <p class="text-lg text-gray-400 text-center mt-2">{tourDates[0].date}</p>
-      <p class="text-lg text-gray-400 text-center mt-2">{tourDates[0].venue}</p>
+      <p class="text-lg text-zinc-400 text-center mt-2">{tourDates[0].date}</p>
+      <p class="text-lg text-zinc-400 text-center mt-2">{tourDates[0].venue}</p>
       <p class="text-md mt-4 text-center">{tourDates[0].details}</p>
       <div class="flex justify-center mt-6">
         <a href={tourDates[0].ticketUrl} target="_blank" class="px-6 py-3 bg-red-500 text-black font-bold rounded-lg hover:bg-red-600 transition no-underline">Buy Tickets</a>
@@ -87,13 +87,13 @@
     <!-- Other Tour Dates -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
       {#each tourDates.slice(1) as tour}
-        <div class="bg-gray-900 p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:border-red-500 border border-transparent">
+        <div class="bg-zinc-900 p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:border-red-500 border border-transparent">
           <h3 class="text-2xl font-semibold text-red-400">{tour.city}</h3>
-          <p class="text-lg text-gray-400 mt-2">{tour.date}</p>
-          <p class="text-lg text-gray-400 mt-2">{tour.venue}</p>
+          <p class="text-lg text-zinc-400 mt-2">{tour.date}</p>
+          <p class="text-lg text-zinc-400 mt-2">{tour.venue}</p>
           <p class="text-sm mt-4">{tour.details}</p>
           <div class="mt-6">
-            <a href={tour.ticketUrl} target="_blank" class="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-red-600 transition no-underline text-sm">Buy Tickets</a>
+            <a href={tour.ticketUrl} target="_blank" class="px-4 py-2 bg-zinc-800 text-white rounded-lg hover:bg-red-600 transition no-underline text-sm">Buy Tickets</a>
           </div>
         </div>
       {/each}

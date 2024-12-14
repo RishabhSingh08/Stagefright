@@ -126,29 +126,29 @@ const removeItem = (itemToRemove) => {
           <button
             type="button"
             on:click={() => { showModal = true; selectedProduct = product; }}
-            class="bg-gray-900 p-6 sm:p-4 rounded-lg shadow-lg text-center cursor-pointer hover:scale-105 hover:border hover:border-red-500 transition"
+            class="bg-zinc-900 p-6 sm:p-4 rounded-lg shadow-lg text-center cursor-pointer hover:scale-105 hover:border hover:border-red-500 transition"
             aria-label="View product details"
           >
             <img src={product.image} alt={product.name} class="w-full h-auto mb-4 rounded-md" />
             <h3 class="text-xl sm:text-lg font-semibold text-red-500">{product.name}</h3>
-            <p class="text-sm sm:text-xs text-gray-400">${product.price.toFixed(2)}</p>
+            <p class="text-sm sm:text-xs text-zinc-400">${product.price.toFixed(2)}</p>
           </button>
         {/each}
       </div>
     </div>
 
     <!-- Cart Section -->
-    <div class="order-2 md:order-none col-span-4 bg-gray-900 text-white p-6 sm:p-4 shadow-xl rounded-lg overflow-y-auto">
+    <div class="order-2 md:order-none col-span-4 bg-zinc-900 text-white p-6 sm:p-4 shadow-xl rounded-lg overflow-y-auto">
       <h3 class="text-2xl sm:text-xl font-semibold text-red-500 mb-6 sm:mb-4 text-center">Your Cart</h3>
       {#if $cart.length > 0}
         <ul class="space-y-4">
           {#each $cart as item}
-            <li class="flex justify-between items-center border-b border-gray-700 pb-2">
+            <li class="flex justify-between items-center border-b border-zinc-700 pb-2">
               <div class="flex-1">
-                <p class="font-semibold">{item.name} <span class="text-sm text-gray-400">({item.size})</span></p>
-                <p class="text-sm sm:text-xs text-gray-400">x{item.quantity}</p>
+                <p class="font-semibold">{item.name} <span class="text-sm text-zinc-400">({item.size})</span></p>
+                <p class="text-sm sm:text-xs text-zinc-400">x{item.quantity}</p>
               </div>
-              <span class="text-red-500 font-semibold border-r pr-4 border-gray-500">${(item.price * item.quantity).toFixed(2)}</span>
+              <span class="text-red-500 font-semibold border-r pr-4 border-zinc-500">${(item.price * item.quantity).toFixed(2)}</span>
               <button 
                 on:click={() => removeItem(item)} 
                 class="text-sm text-red-500 hover:text-red-700 ml-4"
@@ -160,7 +160,7 @@ const removeItem = (itemToRemove) => {
           {/each}
         </ul>
         <div class="mt-6 sm:mt-4">
-          <div class="flex justify-between text-lg sm:text-base font-semibold border-t border-gray-700 pt-4">
+          <div class="flex justify-between text-lg sm:text-base font-semibold border-t border-zinc-700 pt-4">
             <span>Total:</span>
             <span class="text-red-500">${$cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2)}</span>
           </div>
@@ -173,7 +173,7 @@ const removeItem = (itemToRemove) => {
           </button>
         </div>
       {:else}
-        <p class="text-center text-gray-400 mt-12 sm:mt-8">Your cart is empty.</p>
+        <p class="text-center text-zinc-400 mt-12 sm:mt-8">Your cart is empty.</p>
       {/if}
     </div>
   </div>
@@ -181,15 +181,15 @@ const removeItem = (itemToRemove) => {
 <!-- Modal for Product Details -->
 {#if showModal}
   <div class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
-    <div class="bg-gray-900 text-white p-8 sm:p-6 rounded-lg w-96 sm:w-80 shadow-lg">
+    <div class="bg-zinc-900 text-white p-8 sm:p-6 rounded-lg w-96 sm:w-80 shadow-lg">
       <h3 class="text-3xl sm:text-2xl font-semibold text-red-500 mb-4">{selectedProduct.name}</h3>
       <img src={selectedProduct.image} alt={selectedProduct.name} class="w-full h-auto mb-4 rounded-md" />
-      <p class="text-gray-400 sm:text-sm">{selectedProduct.description}</p>
+      <p class="text-zinc-400 sm:text-sm">{selectedProduct.description}</p>
 
       {#if selectedProduct.sizes.length > 0}
         <div class="mt-4">
-          <label for="size" class="block text-sm sm:text-xs text-gray-400">Select Size</label>
-          <select id="size" bind:value={selectedSize} class="mt-2 p-2 bg-gray-800 text-white border border-gray-700 rounded w-full">
+          <label for="size" class="block text-sm sm:text-xs text-zinc-400">Select Size</label>
+          <select id="size" bind:value={selectedSize} class="mt-2 p-2 bg-zinc-800 text-white border border-zinc-700 rounded w-full">
             {#each selectedProduct.sizes as size}
               <option value={size}>{size}</option>
             {/each}
