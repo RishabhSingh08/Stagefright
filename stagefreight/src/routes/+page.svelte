@@ -58,6 +58,19 @@
   });
 </script>
 
+<style>
+  @media (max-width: 640px){
+  .aboutCard{
+    margin-top: 5em;
+    scale: .7;
+  }
+
+  .memberCard{
+  }
+  
+  }
+</style>
+
 <section class="relative w-full h-[40vh] sm:h-[60vh] md:h-[80vh] bg-gray-900">
   <div class="w-full h-full relative overflow-hidden ">
     <div class="absolute inset-0 transition-opacity duration-1000" key={currentImageIndex}>
@@ -69,21 +82,22 @@
     </div>
   </div>
   <div class="absolute inset-0 flex items-center justify-center text-center text-white z-10 px-4">
-    <div class="p-6 bg-black bg-opacity-75 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:border-4 hover:border-red-800">
-      <img src="/images/logo.png" alt="Stage Fright Logo" class="h-40 sm:h-48 md:h-56 mx-auto" />
-      <p class="mt-2 mb-2 text-sm md:text-xl font-medium text-gray-300 uppercase">
+    <div class="aboutCard p-4  bg-black bg-opacity-75 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:border-4 hover:border-red-800 mt-4 ">
+      <img src="/images/logo.png" alt="Stage Fright Logo" class=" h-24 sm:h-32 md:h-40 mx-auto" />
+      <p class="mt-2 mb-2 text-sm sm:text-base md:text-xl font-medium text-gray-300 uppercase">
         Rocking the world with fresh sounds and energy-packed performances
       </p>
     </div>
   </div>
 </section>
 
+
 <section id="about" class="bg-black text-white py-8 sm:py-12 lg:py-16">
   <div class="container mx-auto px-4">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {#each members as member}
         <div
-          class="bg-gray-900 p-4 sm:p-6 rounded-lg shadow-lg text-center transform transition-transform hover:scale-105 hover:shadow-xl hover:border-2 hover:border-red-400 cursor-pointer"
+          class="memberCard bg-gray-900 p-4 sm:p-6 rounded-lg shadow-lg text-center transform transition-transform hover:scale-105 hover:shadow-xl hover:border-2 hover:border-red-400 cursor-pointer"
           on:click={() => openModal(member)}
         >
           <img
