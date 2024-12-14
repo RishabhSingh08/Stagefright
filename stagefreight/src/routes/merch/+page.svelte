@@ -57,7 +57,6 @@
   ];
   const cart = writable([]);
 
-  // Handle adding item to cart
   const addToCart = (product, size) => {
     cart.update(items => {
       const existingItem = items.find(item => item.id === product.id && item.size === size);
@@ -69,6 +68,13 @@
       return items;
     });
   };
+
+const removeItem = (itemToRemove) => {
+  cart.update(items => {
+    return items.filter(item => item.id !== itemToRemove.id || item.size !== itemToRemove.size);
+  });
+};
+
 
   // Handle checkout
 
@@ -100,6 +106,9 @@
 </script>
 
 
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
 
 
 <section class="relative bg-black text-white py-12 sm:py-8 mt-12">
@@ -110,7 +119,7 @@
   <div class="relative container mx-auto px-4 sm:px-2 py-12 sm:py-8 flex flex-col md:grid md:grid-cols-12 gap-8">
     <!-- Merchandise Content -->
     <div class="order-1 md:order-none col-span-8">
-    <h2 class="text-6xl font-bold text-center text-red-500  mb-6">MERCH</h2>
+      <h2 class="text-6xl font-bold text-center text-red-500 mb-6">MERCH</h2>
       <p class="text-lg sm:text-base text-center mb-8 sm:mb-6">Get your official Stage Fright gear! All items are limited edition, so act fast!</p>
       <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-4">
         {#each products as product}
@@ -135,11 +144,18 @@
         <ul class="space-y-4">
           {#each $cart as item}
             <li class="flex justify-between items-center border-b border-gray-700 pb-2">
-              <div>
+              <div class="flex-1">
                 <p class="font-semibold">{item.name} <span class="text-sm text-gray-400">({item.size})</span></p>
                 <p class="text-sm sm:text-xs text-gray-400">x{item.quantity}</p>
               </div>
-              <span class="text-red-500 font-semibold">${(item.price * item.quantity).toFixed(2)}</span>
+              <span class="text-red-500 font-semibold border-r pr-4 border-gray-500">${(item.price * item.quantity).toFixed(2)}</span>
+              <button 
+                on:click={() => removeItem(item)} 
+                class="text-sm text-red-500 hover:text-red-700 ml-4"
+                aria-label="Remove item"
+              >
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              </button>
             </li>
           {/each}
         </ul>
@@ -162,7 +178,6 @@
     </div>
   </div>
 </section>
-
 <!-- Modal for Product Details -->
 {#if showModal}
   <div class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
