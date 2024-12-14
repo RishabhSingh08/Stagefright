@@ -97,7 +97,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {#each members as member}
         <div
-          class="memberCard bg-zinc-900 p-4 sm:p-6 rounded-lg shadow-lg text-center transform transition-transform hover:scale-105 hover:shadow-xl hover:border-2 hover:border-red-400 cursor-pointer"
+          class="memberCard bg-zinc-900 p-4 sm:p-6 rounded-lg shadow-lg text-center transform transition-transform hover:scale-105 hover:shadow-xl hover:border-2 hover:border-red-500 cursor-pointer"
           on:click={() => openModal(member)}
         >
           <img
@@ -105,12 +105,12 @@
             alt={member.name}
             class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full mx-auto mb-4 object-cover"
           />
-          <h3 class="text-sm sm:text-base md:text-lg font-semibold text-red-400">{member.name}</h3>
+          <h3 class="text-sm sm:text-base md:text-lg font-semibold text-red-500">{member.name}</h3>
           <p class="text-xs sm:text-sm md:text-base text-zinc-400">{member.role}</p>
         </div>
       {/each}
     </div>
-    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-red-400 mb-6 sm:mb-8 mt-8 sm:mt-12 lg:mt-16">
+    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-red-500 mb-6 sm:mb-8 mt-8 sm:mt-12 lg:mt-16">
       About Stage Fright
     </h2>
     <p class="text-sm sm:text-base lg:text-lg mb-4 sm:mb-8 text-center">
@@ -127,7 +127,7 @@
   <div class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4">
     <div class="bg-zinc-900 text-white p-6 sm:p-8 rounded-lg shadow-lg max-w-lg w-full">
       <div class="flex justify-between items-center mb-4">
-        <h2 class="text-lg sm:text-xl lg:text-2xl font-bold text-red-400">{selectedMember.name}</h2>
+        <h2 class="text-lg sm:text-xl lg:text-2xl font-bold text-red-500">{selectedMember.name}</h2>
         <button
           on:click={closeModal}
           class="text-lg sm:text-xl text-zinc-400 hover:text-white transition"
@@ -139,9 +139,9 @@
         <img
           src={selectedMember.image}
           alt={selectedMember.name}
-          class="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full mx-auto mb-4 object-cover border-4 border-red-400"
+          class="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full mx-auto mb-4 object-cover border-4 border-red-500"
         />
-        <h3 class="text-sm sm:text-base md:text-lg font-semibold text-red-400">
+        <h3 class="text-sm sm:text-base md:text-lg font-semibold text-red-500">
           {selectedMember.role}
         </h3>
         <p class="text-xs sm:text-sm md:text-base mt-4 text-zinc-300">{selectedMember.bio}</p>

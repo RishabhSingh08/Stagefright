@@ -166,7 +166,7 @@ const removeItem = (itemToRemove) => {
           </div>
           <button
             on:click={checkout}
-            class="w-full mt-6 sm:mt-4 px-6 sm:px-4 py-3 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition"
+            class="w-full mt-6 sm:mt-4 px-6 sm:px-4 py-3 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-500 transition"
             aria-label="Proceed to checkout"
           >
             Checkout
@@ -198,8 +198,8 @@ const removeItem = (itemToRemove) => {
       {/if}
 
       <div class="mt-6 sm:mt-4 flex justify-between space-x-4">
-        <button on:click={() => { addToCart(selectedProduct, selectedSize); showModal = false; }} class="flex-1 px-6 sm:px-4 py-3 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">Add to Cart</button>
-        <button on:click={() => showModal = false} class="flex-1 px-6 sm:px-4 py-3 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">Close</button>
+        <button on:click={() => { addToCart(selectedProduct, selectedSize); showModal = false; }} class="flex-1 px-6 sm:px-4 py-3 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-500 transition">Add to Cart</button>
+        <button on:click={() => showModal = false} class="flex-1 px-6 sm:px-4 py-3 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-500 transition">Close</button>
       </div>
     </div>
   </div>
