@@ -5,52 +5,53 @@
   <!-- <script src='https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.js'></script>
 <link href='https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.css' rel='stylesheet' /> -->
 </head>
-<style>
-
-</style>
 
 
 <section class="bg-black text-white py-16">
   
   <div class="container mx-auto px-4">
-    <h2 class="text-6xl font-bold text-center text-red-500 my-12">CONTACT US</h2>
-    <p class="text-lg text-center mb-8 text-gray-300">Have a question? Want to book Stage Fright for an event? Reach out to us using the form below or find other ways to get in touch.</p>
+<h2 class="text-4xl md:text-6xl font-bold text-center text-red-500 my-12">CONTACT US</h2>
+    <p class="text-lg text-center mb-8 text-gray-300">
+      Have a question? Want to book Stage Fright for an event? Reach out to us using the form below or find other ways to get in touch.
+    </p>
 
     <!-- Contact Information Section -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12 p-8 bg-gray-900 rounded-lg shadow-lg">
-  <div class="pr-8 border-r border-gray-600">
-    <h3 class="text-2xl font-bold text-red-400 mb-4">Reach Out</h3>
-    <p class="text-lg mb-4 text-gray-300">You can contact us directly using the form, or feel free to reach out via email, phone, or through our social media pages.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12 p-8 bg-gray-900 rounded-lg shadow-lg">
+      <div class="md:pr-8 md:border-r md:border-gray-600">
+        <h3 class="text-2xl font-bold text-red-400 mb-4">Reach Out</h3>
+        <p class="text-lg mb-4 text-gray-300">
+          You can contact us directly using the form, or feel free to reach out via email, phone, or through our social media pages.
+        </p>
+        <p class="text-lg font-semibold text-red-400 mb-2">Email:</p>
+        <p class="text-lg text-gray-300 mb-4">contact@stagefrightband.com</p>
+        <p class="text-lg font-semibold text-red-400 mb-2">Phone:</p>
+        <p class="text-lg text-gray-300 mb-4">+1 (123) 456-7890</p>
+        <p class="text-lg font-semibold text-red-400 mb-2">Address:</p>
+        <p class="text-lg text-gray-300">Stage Fright, 123 Music St., Los Angeles, CA, 90001</p>
+      </div>
 
-    <p class="text-lg font-semibold text-red-400 mb-2">Email:</p>
-    <p class="text-lg text-gray-300 mb-4">contact@stagefrightband.com</p>
-
-    <p class="text-lg font-semibold text-red-400 mb-2">Phone:</p>
-    <p class="text-lg text-gray-300 mb-4">+1 (123) 456-7890</p>
-
-    <p class="text-lg font-semibold text-red-400 mb-2">Address:</p>
-    <p class="text-lg text-gray-300">Stage Fright, 123 Music St., Los Angeles, CA, 90001</p>
-  </div>
-
-  <div class="pl-8">
-    <h3 class="text-2xl font-bold text-red-400 mb-4">Follow Us</h3>
-    <p class="text-lg mb-4 text-gray-300">Stay connected with Stage Fright on our social media channels for the latest updates, news, and behind-the-scenes action!</p>
-    <div class="flex space-x-6">
-      <a href="https://facebook.com/stagefrightband" class="text-red-400 hover:text-red-500 transition" aria-label="Follow Stage Fright on Facebook">
-        <i class="fab fa-facebook-square text-3xl"></i>
-      </a>
-      <a href="https://twitter.com/stagefrightband" class="text-red-400 hover:text-red-500 transition" aria-label="Follow Stage Fright on Twitter">
-        <i class="fab fa-twitter text-3xl"></i>
-      </a>
-      <a href="https://instagram.com/stagefrightband" class="text-red-400 hover:text-red-500 transition" aria-label="Follow Stage Fright on Instagram">
-        <i class="fab fa-instagram text-3xl"></i>
-      </a>
-      <a href="https://youtube.com/stagefrightband" class="text-red-400 hover:text-red-500 transition" aria-label="Follow Stage Fright on YouTube">
-        <i class="fab fa-youtube text-3xl"></i>
-      </a>
+      <div class="md:pl-8">
+        <h3 class="text-2xl font-bold text-red-400 mb-4">Follow Us</h3>
+        <p class="text-lg mb-4 text-gray-300">
+          Stay connected with Stage Fright on our social media channels for the latest updates, news, and behind-the-scenes action!
+        </p>
+        <div class="flex space-x-6">
+          <a href="https://facebook.com/stagefrightband" class="text-red-400 hover:text-red-500 transition" aria-label="Follow Stage Fright on Facebook">
+            <i class="fab fa-facebook-square text-3xl"></i>
+          </a>
+          <a href="https://twitter.com/stagefrightband" class="text-red-400 hover:text-red-500 transition" aria-label="Follow Stage Fright on Twitter">
+            <i class="fab fa-twitter text-3xl"></i>
+          </a>
+          <a href="https://instagram.com/stagefrightband" class="text-red-400 hover:text-red-500 transition" aria-label="Follow Stage Fright on Instagram">
+            <i class="fab fa-instagram text-3xl"></i>
+          </a>
+          <a href="https://youtube.com/stagefrightband" class="text-red-400 hover:text-red-500 transition" aria-label="Follow Stage Fright on YouTube">
+            <i class="fab fa-youtube text-3xl"></i>
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+
     <!-- Contact Form Section -->
     <div class="max-w-lg mx-auto mb-12 p-8 bg-gray-900 rounded-lg shadow-lg">
       <h3 class="text-3xl font-bold text-red-400 mb-4">Send Us a Message</h3>

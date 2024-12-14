@@ -80,10 +80,10 @@
 
 <section id="about" class="bg-black text-white py-8 sm:py-12 lg:py-16">
   <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {#each members as member}
         <div
-          class="bg-gray-900 p-4 sm:p-6 rounded-lg shadow-lg text-center transform transition-transform hover:scale-105 hover:shadow-xl hover:border-2 hover:border-red-400 cursor-pointer "
+          class="bg-gray-900 p-4 sm:p-6 rounded-lg shadow-lg text-center transform transition-transform hover:scale-105 hover:shadow-xl hover:border-2 hover:border-red-400 cursor-pointer"
           on:click={() => openModal(member)}
         >
           <img
@@ -130,7 +130,7 @@
         <h3 class="text-sm sm:text-base md:text-lg font-semibold text-red-400">
           {selectedMember.role}
         </h3>
-        <p class="text-xs sm:text-sm md:text-base mt-4 text-gray-300 ">{selectedMember.bio}</p>
+        <p class="text-xs sm:text-sm md:text-base mt-4 text-gray-300">{selectedMember.bio}</p>
       </div>
     </div>
   </div>
