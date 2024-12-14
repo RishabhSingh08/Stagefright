@@ -70,7 +70,7 @@
   <!-- Content Container -->
   <div class="relative container mx-auto px-4">
     <!-- Title and Intro -->
-    <h2 class="text-6xl font-bold text-center text-red-500 mb-12">TOURS & EVENTS</h2>
+    <h2 class="text-6xl font-bold text-center text-red-500 mb-12">TOURS</h2>
     <p class="text-xl text-center mb-12">Catch us live at one of these upcoming shows! Get your tickets today.</p>
 
     <!-- Highlighted Upcoming Show -->
