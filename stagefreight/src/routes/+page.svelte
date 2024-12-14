@@ -43,7 +43,6 @@
     "/images/band4.png",
     "/images/band5.png",
     "/images/band6.png",
-
   ];
 
   let currentImageIndex = 0;
@@ -59,8 +58,8 @@
   });
 </script>
 
-<section class="relative w-full h-[60vh] md:h-[80vh] bg-gray-900">
-  <div class="w-full h-full relative overflow-hidden">
+<section class="relative w-full h-[40vh] sm:h-[60vh] md:h-[80vh] bg-gray-900">
+  <div class="w-full h-full relative overflow-hidden ">
     <div class="absolute inset-0 transition-opacity duration-1000" key={currentImageIndex}>
       <img
         src={carouselImages[currentImageIndex]}
@@ -69,46 +68,55 @@
       />
     </div>
   </div>
-<div class="absolute inset-0 flex items-center justify-center text-center text-white z-10">
-  <div class="p-6 bg-black bg-opacity-75 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:border-4 hover:border-red-800">
-    <img src="/images/logo.png" alt="Stage Fright Logo" class="h-56 mx-auto" />
-    <p class="mt-2 mb-2 text-xl font-medium text-gray-300 uppercase">Rocking the world with fresh sounds and energy-packed performances</p>
+  <div class="absolute inset-0 flex items-center justify-center text-center text-white z-10 px-4">
+    <div class="p-6 bg-black bg-opacity-75 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:border-4 hover:border-red-800">
+      <img src="/images/logo.png" alt="Stage Fright Logo" class="h-40 sm:h-48 md:h-56 mx-auto" />
+      <p class="mt-2 mb-2 text-sm md:text-xl font-medium text-gray-300 uppercase">
+        Rocking the world with fresh sounds and energy-packed performances
+      </p>
+    </div>
   </div>
-</div>
-
 </section>
 
-<section id="about" class="bg-black text-white py-16">
+<section id="about" class="bg-black text-white py-8 sm:py-12 lg:py-16">
   <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
       {#each members as member}
         <div
-          class="bg-gray-900 p-6 rounded-lg shadow-lg text-center transform transition-transform hover:scale-105 hover:shadow-xl hover:border-2 hover:border-red-400 cursor-pointer"
+          class="bg-gray-900 p-4 sm:p-6 rounded-lg shadow-lg text-center transform transition-transform hover:scale-105 hover:shadow-xl hover:border-2 hover:border-red-400 cursor-pointer "
           on:click={() => openModal(member)}
         >
           <img
             src={member.image}
             alt={member.name}
-            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+            class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full mx-auto mb-4 object-cover"
           />
-          <h3 class="text-xl font-semibold text-red-400">{member.name}</h3>
-          <p class="text-sm text-gray-400">{member.role}</p>
+          <h3 class="text-sm sm:text-base md:text-lg font-semibold text-red-400">{member.name}</h3>
+          <p class="text-xs sm:text-sm md:text-base text-gray-400">{member.role}</p>
         </div>
       {/each}
     </div>
-    <h2 class="text-3xl font-bold text-center text-red-400 mb-8 mt-16">About Stage Fright</h2>
-    <p class="text-lg mb-8 text-center">Stage Fright was born in a small garage in Austin, TX, where Alex and Ethan first began jamming together after school.<br><br>What started as casual practice sessions quickly became a vision for something bigger. The duo soon connected with Mia and Jenna through mutual friends, and their chemistry was instant.<br><br>United by a shared love for rock and an ambition to create something fresh and authentic, the band started writing and performing original songs at local gigs. Over time, their energy-packed performances and heartfelt lyrics captured the attention of fans and critics alike.<br><br>Today, Stage Fright is on a mission to bring their music to stages everywhere, blending classic rock influences with a modern twist. Each member brings their own unique flair to the group, making Stage Fright a band that stands out and leaves a lasting impression.
+    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-red-400 mb-6 sm:mb-8 mt-8 sm:mt-12 lg:mt-16">
+      About Stage Fright
+    </h2>
+    <p class="text-sm sm:text-base lg:text-lg mb-4 sm:mb-8 text-center">
+      Stage Fright was born in a small garage in Austin, TX, where Alex and Ethan first began
+      jamming together after school. What started as casual practice sessions quickly became a vision for something bigger. 
+      The duo soon connected with Mia and Jenna through mutual friends, and their chemistry was instant. 
+      United by a shared love for rock and an ambition to create something fresh and authentic, the band started writing and performing original songs at local gigs. 
+      Over time, their energy-packed performances and heartfelt lyrics captured the attention of fans and critics alike.
+    </p>
   </div>
 </section>
 
 {#if selectedMember}
-  <div class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 mt-8">
-    <div class="bg-gray-900 text-white p-8 rounded-lg shadow-lg max-w-lg w-full">
+  <div class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4">
+    <div class="bg-gray-900 text-white p-6 sm:p-8 rounded-lg shadow-lg max-w-lg w-full">
       <div class="flex justify-between items-center mb-4">
-        <h2 class="text-2xl font-bold text-red-400">{selectedMember.name}</h2>
+        <h2 class="text-lg sm:text-xl lg:text-2xl font-bold text-red-400">{selectedMember.name}</h2>
         <button
           on:click={closeModal}
-          class="text-xl text-gray-400 hover:text-white transition"
+          class="text-lg sm:text-xl text-gray-400 hover:text-white transition"
         >
           &times;
         </button>
@@ -117,10 +125,12 @@
         <img
           src={selectedMember.image}
           alt={selectedMember.name}
-          class="w-48 h-48 rounded-full mx-auto mb-4 object-cover border-4 border-red-400"
+          class="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full mx-auto mb-4 object-cover border-4 border-red-400"
         />
-        <h3 class="text-xl font-semibold text-red-400">{selectedMember.role}</h3>
-        <p class="text-lg mt-4 text-gray-300">{selectedMember.bio}</p>
+        <h3 class="text-sm sm:text-base md:text-lg font-semibold text-red-400">
+          {selectedMember.role}
+        </h3>
+        <p class="text-xs sm:text-sm md:text-base mt-4 text-gray-300 ">{selectedMember.bio}</p>
       </div>
     </div>
   </div>
