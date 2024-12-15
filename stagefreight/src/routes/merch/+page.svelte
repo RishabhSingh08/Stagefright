@@ -112,7 +112,7 @@ const removeItem = (itemToRemove) => {
 
 <section class="relative bg-black text-white py-12 sm:py-8 mt-12">
   <div class="absolute inset-0">
-    <img src="/images/band1.png" alt="Tour Hero Image" class="object-cover w-full h-full opacity-30" />
+    <img src="/images/band1.png" alt="Tour Hero" class="object-cover w-full h-full opacity-30" />
   </div>
 
   <div class="relative container mx-auto px-4 sm:px-2 py-12 sm:py-8 flex flex-col md:grid md:grid-cols-12 gap-8">

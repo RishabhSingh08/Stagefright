@@ -74,7 +74,7 @@
     <div class="absolute inset-0 transition-opacity duration-1000" key={currentImageIndex}>
       <img
         src={carouselImages[currentImageIndex]}
-        alt="Band image"
+        alt="Band"
         class="object-cover w-full h-full"
       />
     </div>
@@ -94,18 +94,20 @@
   <div class="container mx-auto px-4">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       {#each members as member}
-        <div
-          class="memberCard bg-gradient-to-br from-zinc-800 to-zinc-900 p-6 rounded-lg shadow-lg border border-zinc-700 text-center transform transition-transform hover:scale-105 hover:shadow-2xl hover:border-red-500 cursor-pointer"
-          on:click={() => openModal(member)}
-        >
-          <img
-            src={member.image}
-            alt={member.name}
-            class="w-28 h-28 md:w-32 md:h-32 rounded-full mx-auto mb-4 object-cover border-4 border-zinc-700"
-          />
-          <h3 class="text-lg font-semibold text-red-500">{member.name}</h3>
-          <p class="text-sm text-zinc-400">{member.role}</p>
-        </div>
+<button
+  type="button"
+  class="memberCard bg-gradient-to-br from-zinc-800 to-zinc-900 p-6 rounded-lg shadow-lg border border-zinc-700 text-center transform transition-transform hover:scale-105 hover:shadow-2xl hover:border-red-500 cursor-pointer focus:outline-none"
+  on:click={() => openModal(member)}
+>
+  <img
+    src={member.image}
+    alt={member.name}
+    class="w-28 h-28 md:w-32 md:h-32 rounded-full mx-auto mb-4 object-cover border-4 border-zinc-700"
+  />
+  <h3 class="text-lg font-semibold text-red-500">{member.name}</h3>
+  <p class="text-sm text-zinc-400">{member.role}</p>
+</button>
+
       {/each}
     </div>
     <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-red-500 my-12">
@@ -147,10 +149,7 @@
       </div>
       
       <!-- Decorative Buttons -->
-      <div class="mt-6 flex justify-center space-x-4">
-        <button class="px-4 py-2 bg-red-500 text-white rounded-md shadow-md hover:bg-red-600 transition">
-          View Profile
-        </button>
+      <div class="mt-8 flex justify-center space-x-4">
         <button on:click={closeModal} class="px-4 py-2 bg-zinc-700 text-white rounded-md shadow-md hover:bg-zinc-600 transition">
           Close
         </button>
