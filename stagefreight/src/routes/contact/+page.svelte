@@ -118,10 +118,10 @@
 </form>
 
 <!-- Error message -->
-<p id="errorMessage" class="text-center text-lg text-red-500 mt-4 hidden">Missing Field!</p>
+<p id="errorMessage" class="text-center text-sm text-red-500 mt-4 hidden">Missing Field!</p>
 
 <!-- Confirmation message -->
-<p id="confirmationMessage" class="text-center text-lg text-green-500 mt-4 hidden">Message Sent!</p>
+<p id="confirmationMessage" class="text-center text-sm text-green-500 mt-4 hidden">Message Sent!</p>
     </div>
 
     <!-- Map Section -->

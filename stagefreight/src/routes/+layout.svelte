@@ -94,7 +94,7 @@
     </a>
     <div class="text-sm text-center lg:text-left">
       <p>BPA 435 Website Design Team | STAGEFRIGHT | Plano West Senior High School</p>
-      <p>Rishabh Singh | Plano, TX 2024</p>
+      <p>Rishabh Singh, Kaushal Ganapur | Plano, TX 2024</p>
     </div>
   </footer>
 </section>

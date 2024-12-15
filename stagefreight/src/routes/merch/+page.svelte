@@ -99,8 +99,7 @@ const removeItem = (itemToRemove) => {
   });
 
     const checkout = () => {
-  const total = $cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
-  alert("Checked Out!\nTotal: $" + total);
+  alert("We can't accept online orders right now");
   cart.set([]);
   };
 </script>
