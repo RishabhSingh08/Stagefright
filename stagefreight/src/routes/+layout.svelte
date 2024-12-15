@@ -90,9 +90,12 @@
     <a href="/" class="flex items-center space-x-2">
       <img src="/images/logo.png" alt="Stage Fright Logo" class="h-12" />
     </a>
+    <div>
+<p>Plano West High School BPA | Stage Fright | Plano, Texas | 2024</p>
+
+    </div>
     <div class="text-sm text-center lg:text-left">
-      <p>BPA 435 Website Design Team | STAGEFRIGHT | Plano West Senior High School</p>
-      <p>Rishabh Singh, Kaushal Ganapur | Plano, TX 2024</p>
+    <p>Made with ❤️ By Rishabh Singh & Kaushal Ganapur</p>
     </div>
   </footer>
 </section>
