@@ -98,7 +98,7 @@
       </p>
     </div>
     <div class="text-xs sm:text-sm text-center lg:text-left sm:block">
-      <p class="hidden sm:block">Rishabh Singh | Kaushal Ganapur | Adwaith Sajin</p>
+      <p class="hidden sm:block">Rishabh Singh | Kaushal Ganapur | Aadwaith Sajin</p>
     </div>
   </footer>
 </section>

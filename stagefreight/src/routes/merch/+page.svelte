@@ -3,56 +3,48 @@
   import { browser } from '$app/environment';
 
 
-  const products = [
-    {
-      id: 1,
-      name: "Stage Fright T-shirt",
-      price: 20.00,
-      image: "/images/shirt.png",
-      description: "A high-quality cotton T-shirt with the Stage Fright logo.",
-      sizes: ["S", "M", "L", "XL"]
-    },
-    {
-      id: 2,
-      name: "Stage Fright - Debut Album",
-      price: 15.00,
-      image: "/images/cd.png",
-      description: "The debut album by Stage Fright, available on CD.",
-      sizes: [] 
-    },
-    {
-      id: 3,
-      name: "Stage Fright Cap",
-      price: 25.00,
-      image: "/images/cap.png",
-      description: "A classic cap featuring the Stage Fright logo.",
-      sizes: [] 
-    },
-    {
-      id: 4,
-      name: "Stage Fright Hoodie",
-      price: 40.00,
-      image: "/images/hoodie.png",
-      description: "Stay warm and stylish with the official Stage Fright hoodie.",
-      sizes: ["S", "M", "L", "XL"]
-    },
-    {
-      id: 5,
-      name: "Stage Fright Poster",
-      price: 10.00,
-      image: "/images/band1.png",
-      description: "A high-quality poster of Stage Fright in concert.",
-      sizes: [] 
-    },
-    {
-      id: 6,
-      name: "Stage Fright Shoes",
-      price: 40.00,
-      image: "/images/shoes.png",
-      description: "High quality all-black shoes made for style.",
-      sizes: ["S", "M", "L"]
-    }
-  ];
+const products = [
+  {
+    id: 1,
+    name: "Stage Fright T-shirt",
+    price: 25.00,
+    image: "/images/shirt.png",
+    description: "A premium cotton T-shirt with a bold Stage Fright logo, perfect for fans.",
+    sizes: ["S", "M", "L", "XL"]
+  },
+  {
+    id: 2,
+    name: "Stage Fright Cap",
+    price: 20.00,
+    image: "/images/cap.png",
+    description: "A sleek and stylish cap with the iconic Stage Fright logo, adjustable for all sizes.",
+    sizes: [] 
+  },
+  {
+    id: 3,
+    name: "Stage Fright Hoodie",
+    price: 50.00,
+    image: "/images/hoodie.png",
+    description: "Stay cozy with this soft, high-quality hoodie featuring the official Stage Fright design.",
+    sizes: ["S", "M", "L", "XL"]
+  },
+  {
+    id: 4,
+    name: "Stage Fright Sweatshirt",
+    price: 35.00,
+    image: "/images/ss.png",
+    description: "A durable and comfortable sweatshirt showcasing Stage Fright's unique artwork.",
+    sizes: ["S", "M", "L", "XL"] 
+  },
+  {
+    id: 5,
+    name: "Stage Fright Poster",
+    price: 12.00,
+    image: "/images/Poster.png",
+    description: "A poster with Stage Fright's logo, perfect for hanging up for show.",
+    sizes: []
+  }
+];
   const cart = writable([]);
 
   const addToCart = (product, size) => {
