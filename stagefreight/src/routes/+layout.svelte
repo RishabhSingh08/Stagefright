@@ -101,7 +101,7 @@
     </div>
     <div class="text-xs sm:text-sm text-center lg:text-left sm:block">
       <!-- Larger screen text -->
-      <p class="hidden sm:block">Made with ❤️ By Rishabh Singh & Kaushal Ganapur</p>
+      <p class="hidden sm:block">Rishabh Singh & Kaushal Ganapur</p>
     </div>
   </footer>
 </section>
