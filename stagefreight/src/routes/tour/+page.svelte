@@ -56,26 +56,20 @@
       ticketUrl: "https://www.ticketmaster.com/discover/concerts/denver",
       details: "Stage Fright takes the stage at Denver's iconic Bluebird Theater. Get ready for a night of unforgettable music!"
     },
-    // Add more events as necessary
   ];
 </script>
 
 
 
 <section class="relative bg-black text-white py-24">
-  <!-- Hero Image for Tour Section -->
   <div class="absolute inset-0">
-    <!-- Background image for the tour section -->
     <img src="/images/band1.png" alt="Tour Hero" class="object-cover w-full h-full opacity-30" />
   </div>
 
-  <!-- Content Container -->
   <div class="relative container mx-auto px-4">
-    <!-- Title and Intro -->
     <h2 class="text-6xl font-bold text-center text-red-500 mb-12">TOURS</h2>
     <p class="text-xl text-center mb-12">Catch us live at one of these upcoming shows! Get your tickets today.</p>
 
-    <!-- Highlighted Upcoming Show -->
     <div class="bg-zinc-900 p-8 rounded-lg shadow-lg mb-12 border border-red-500">
       <h3 class="text-4xl font-semibold text-center text-red-500">{tourDates[0].city}</h3>
       <p class="text-lg text-zinc-400 text-center mt-2">{tourDates[0].date}</p>
@@ -86,7 +80,6 @@
       </div>
     </div>
 
-    <!-- Other Tour Dates -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
       {#each tourDates.slice(1) as tour}
         <div class="bg-zinc-900 p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:border-red-500 border border-transparent">

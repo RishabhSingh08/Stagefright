@@ -59,7 +59,6 @@
     </p>
 
 
-    <!-- Contact Information Section -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12 p-8 bg-zinc-900 rounded-lg shadow-lg">
       <div class="md:pr-8 md:border-r md:border-zinc-600">
         <h3 class="text-2xl font-bold text-red-500 mb-4">Reach Out</h3>
@@ -96,7 +95,6 @@
       </div>
     </div>
 
-    <!-- Contact Form Section -->
     <div class="max-w-lg mx-auto mb-12 p-8 bg-zinc-900 rounded-lg shadow-lg">
       <h3 class="text-3xl font-bold text-red-500 mb-4">Send Us a Message</h3>
       <p class="text-lg mb-8 text-zinc-300">We're happy to hear from you. Whether you want to book us for a show, ask a question, or send us feedback, fill out the form below and we’ll get back to you as soon as possible.</p>
@@ -117,20 +115,16 @@
   <button type="submit" class="w-full bg-red-500 hover:bg-red-500 text-black py-2 px-6 rounded-lg transition">Submit</button>
 </form>
 
-<!-- Error message -->
 <p id="errorMessage" class="text-center text-sm text-red-500 mt-4 hidden">Missing Field!</p>
 
-<!-- Confirmation message -->
 <p id="confirmationMessage" class="text-center text-sm text-green-500 mt-4 hidden">Message Sent!</p>
     </div>
 
-    <!-- Map Section -->
 <div class="mb-12 p-8 bg-zinc-900 rounded-lg shadow-lg flex flex-col items-center justify-center">
   <h3 class="text-2xl font-bold text-red-500 text-center mb-4">Find Us</h3>
   <p class="text-lg text-zinc-300 text-center mb-8">We’re based in Los Angeles, but we travel the world! Here’s our location for any in-person inquiries:</p>
   <img src="images/map.png" alt="" class="scale-110 rounded-xl self-center my-4">
 </div>
-    <!-- FAQ Section -->
     <div class="mb-12 p-8 bg-zinc-900 rounded-lg shadow-lg">
       <h3 class="text-2xl font-bold text-red-500 text-center mb-4">Frequently Asked Questions</h3>
       <div class="space-y-6">

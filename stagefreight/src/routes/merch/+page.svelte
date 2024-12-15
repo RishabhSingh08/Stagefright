@@ -2,9 +2,7 @@
   import { writable } from 'svelte/store';
   import { browser } from '$app/environment';
 
-  // Shopping cart store to hold the cart data
 
-  // Product data
   const products = [
     {
       id: 1,
@@ -20,7 +18,7 @@
       price: 15.00,
       image: "/images/cd.png",
       description: "The debut album by Stage Fright, available on CD.",
-      sizes: []  // No size for albums
+      sizes: [] 
     },
     {
       id: 3,
@@ -28,7 +26,7 @@
       price: 25.00,
       image: "/images/cap.png",
       description: "A classic cap featuring the Stage Fright logo.",
-      sizes: []  // No size for hats
+      sizes: [] 
     },
     {
       id: 4,
@@ -44,7 +42,7 @@
       price: 10.00,
       image: "/images/band1.png",
       description: "A high-quality poster of Stage Fright in concert.",
-      sizes: []  // No size for posters
+      sizes: [] 
     },
     {
       id: 6,
@@ -75,15 +73,10 @@ const removeItem = (itemToRemove) => {
   });
 };
 
-
-  // Handle checkout
-
-
   let showModal = false;
   let selectedProduct = null;
   let selectedSize = 'S';
 
-  // Initialize cart from localStorage
   let initialCart = [];
   if (browser) {
     const savedCart = localStorage.getItem('cart');
@@ -91,7 +84,6 @@ const removeItem = (itemToRemove) => {
   }
   cart.set(initialCart);
 
-  // Save cart to localStorage on change
   cart.subscribe((items) => {
     if (browser) {
       localStorage.setItem('cart', JSON.stringify(items));
@@ -116,7 +108,6 @@ const removeItem = (itemToRemove) => {
   </div>
 
   <div class="relative container mx-auto px-4 sm:px-2 py-12 sm:py-8 flex flex-col md:grid md:grid-cols-12 gap-8">
-    <!-- Merchandise Content -->
     <div class="order-1 md:order-none col-span-8">
       <h2 class="text-6xl font-bold text-center text-red-500 mb-6">MERCH</h2>
       <p class="text-lg sm:text-base text-center mb-8 sm:mb-6">Get your official Stage Fright gear! All items are limited edition, so act fast!</p>
@@ -136,7 +127,6 @@ const removeItem = (itemToRemove) => {
       </div>
     </div>
 
-    <!-- Cart Section -->
     <div class="order-2 md:order-none col-span-4 bg-zinc-900 text-white p-6 sm:p-4 shadow-xl rounded-lg overflow-y-auto">
       <h3 class="text-2xl sm:text-xl font-semibold text-red-500 mb-6 sm:mb-4 text-center">Your Cart</h3>
       {#if $cart.length > 0}
@@ -177,7 +167,7 @@ const removeItem = (itemToRemove) => {
     </div>
   </div>
 </section>
-<!-- Modal for Product Details -->
+
 {#if showModal}
   <div class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
     <div class="bg-zinc-900 text-white p-8 sm:p-6 rounded-lg w-96 sm:w-80 shadow-lg">

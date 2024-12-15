@@ -25,7 +25,6 @@
     padding: 0.5rem 0;
   }
 
-  /* Hover effect for nav-link */
   .nav-link::after {
     content: '';
     position: absolute;
@@ -53,12 +52,10 @@
 <nav class="fixed top-0 left-0 w-full bg-black text-white shadow-md z-50 border-b border-white">
   <div class="container mx-auto px-4 py-2 flex justify-between items-center">
     <div class="flex items-center space-x-4">
-      <!-- Logo -->
       <a href="/" class="flex items-center space-x-2">
         <img src="/images/logo.png" alt="Stage Fright Logo" class="h-10 w-auto" />
       </a>
     </div>
-    <!-- Hamburger menu for mobile -->
     <button
     aria-label="Toggle Menu"
       id="menu-toggle"
@@ -69,14 +66,12 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
       </svg>
     </button>
-    <!-- Desktop menu -->
     <div class="hidden lg:flex lg:space-x-6 lg:items-center">
       <a href="/tour" class="nav-link">Tour</a>
       <a href="/merch" class="nav-link">Merch</a>
       <a href="/contact" class="nav-link">Contact</a>
     </div>
   </div>
-  <!-- Mobile menu dropdown -->
   {#if menuVisible}
     <div class="bg-black text-white flex flex-col px-4 space-y-2 lg:hidden border-t border-white py-2">
       <a href="/tour" class="nav-link border-b border-zinc-700  py-2" on:click={closeMenu}>Tour</a>

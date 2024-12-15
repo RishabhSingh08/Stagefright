@@ -126,7 +126,6 @@
 {#if selectedMember}
   <div class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 px-4">
     <div class="bg-gradient-to-t from-zinc-800 to-zinc-900 p-8 sm:p-10 rounded-xl shadow-xl max-w-lg w-full relative border border-zinc-700">
-      <!-- Close button -->
       <button
         on:click={closeModal}
         class="absolute top-3 right-3 text-2xl text-zinc-400 hover:text-white transition transform hover:scale-110"
@@ -134,7 +133,6 @@
         &times;
       </button>
       
-      <!-- Modal Content -->
       <div class="text-center">
         <img
           src={selectedMember.image}
@@ -148,7 +146,6 @@
         </p>
       </div>
       
-      <!-- Decorative Buttons -->
       <div class="mt-8 flex justify-center space-x-4">
         <button on:click={closeModal} class="px-4 py-2 bg-zinc-700 text-white rounded-md shadow-md hover:bg-zinc-600 transition">
           Close
