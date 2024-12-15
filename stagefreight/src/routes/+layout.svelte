@@ -84,18 +84,25 @@
 <main>
   <slot />
 </main>
-
 <section class="border-t border-white">
   <footer class="bg-black text-white p-4 text-center flex flex-col items-center space-y-4 lg:space-y-0 lg:flex-row lg:justify-between lg:items-center">
     <a href="/" class="flex items-center space-x-2">
       <img src="/images/logo.png" alt="Stage Fright Logo" class="h-12" />
     </a>
-    <div>
-<p>Plano West High School BPA | Stage Fright | Plano, Texas | 2024</p>
-
+    <div class="text-xs sm:text-sm text-center lg:text-left sm:block">
+      <!-- Mobile Text -->
+      <p class="sm:hidden">
+        Rishabh Singh & Kaushal Ganapur | Plano West High School BPA | Stage Fright | Plano, Texas | 2024
+      </p>
+      <!-- Larger screen text -->
+      <p class="hidden sm:block">
+        Plano West High School BPA | Stage Fright | Plano, Texas | 2024
+      </p>
     </div>
-    <div class="text-sm text-center lg:text-left">
-    <p>Made with ❤️ By Rishabh Singh & Kaushal Ganapur</p>
+    <div class="text-xs sm:text-sm text-center lg:text-left sm:block">
+      <!-- Larger screen text -->
+      <p class="hidden sm:block">Made with ❤️ By Rishabh Singh & Kaushal Ganapur</p>
     </div>
   </footer>
 </section>
+
