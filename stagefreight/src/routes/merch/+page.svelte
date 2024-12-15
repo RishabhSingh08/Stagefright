@@ -101,6 +101,22 @@ const removeItem = (itemToRemove) => {
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 
+<style>
+    @keyframes popup {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .modal-enter {
+    animation: popup 0.3s ease-out forwards;
+  }
+</style>
 
 <section class="relative bg-black text-white py-12 sm:py-8 mt-12">
   <div class="absolute inset-0">
@@ -170,7 +186,7 @@ const removeItem = (itemToRemove) => {
 
 {#if showModal}
   <div class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
-    <div class="bg-zinc-900 text-white p-8 sm:p-6 rounded-lg w-96 sm:w-80 shadow-lg">
+    <div class="bg-zinc-900 text-white p-8 sm:p-6 rounded-lg w-96 sm:w-80 shadow-lg modal-enter">
       <h3 class="text-3xl sm:text-2xl font-semibold text-red-500 mb-4">{selectedProduct.name}</h3>
       <img src={selectedProduct.image} alt={selectedProduct.name} class="w-full h-auto mb-4 rounded-md" />
       <p class="text-zinc-400 sm:text-sm">{selectedProduct.description}</p>

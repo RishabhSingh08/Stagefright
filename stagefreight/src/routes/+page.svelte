@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from "svelte";
   let members = [
     {
       name: "Alex Carter",
@@ -19,9 +20,9 @@
       image: "https://xsgames.co/randomusers/assets/avatars/male/10.jpg"
     },
     {
-      name: "Jenna Patel",
+      name: "Jenna Anderson",
       role: "Drums and Percussion",
-      bio: "Jenna Patel, hailing from Chicago, IL, is the powerhouse drummer and percussionist of Stage Fright. Growing up in a family of musicians, Jenna was always surrounded by music, and by the age of 12, she was playing drums in her school band. Her love for rhythm grew as she explored different styles, from jazz to punk rock, which now influences her energetic and versatile drumming style. After moving to Portland, OR, Jenna joined Stage Fright, where her precision and intensity behind the kit became a defining feature of their live performances. Jenna’s enthusiasm for experimenting with new sounds keeps the band's music fresh and innovative, driving their sound forward with every beat.",
+      bio: "Jenna Anderson, hailing from Chicago, IL, is the powerhouse drummer and percussionist of Stage Fright. Growing up in a family of musicians, Jenna was always surrounded by music, and by the age of 12, she was playing drums in her school band. Her love for rhythm grew as she explored different styles, from jazz to punk rock, which now influences her energetic and versatile drumming style. After moving to Portland, OR, Jenna joined Stage Fright, where her precision and intensity behind the kit became a defining feature of their live performances. Jenna’s enthusiasm for experimenting with new sounds keeps the band's music fresh and innovative, driving their sound forward with every beat.",
       image: "https://xsgames.co/randomusers/assets/avatars/female/2.jpg"
     }
   ];
@@ -51,22 +52,101 @@
     currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
   };
 
-  import { onMount } from "svelte";
   onMount(() => {
     const interval = setInterval(changeImage, 3000);
     return () => clearInterval(interval);
   });
+
+    let aboutCard;
+
+  onMount(() => {
+    const height = aboutCard.clientHeight;
+    const width = aboutCard.clientWidth;
+
+    const handleMove = (e) => {
+      const xVal = e.layerX;
+      const yVal = e.layerY;
+
+      const yRotation = 20 * ((xVal - width / 2) / width);
+      const xRotation = -20 * ((yVal - height / 2) / height);
+
+      const transformString = `perspective(900px) scale(1.1) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+      aboutCard.style.transform = transformString;
+    };
+
+    const resetTransform = () => {
+      aboutCard.style.transform = "perspective(900px) scale(1) rotateX(0) rotateY(0)";
+    };
+
+    aboutCard.addEventListener("mousemove", handleMove);
+    aboutCard.addEventListener("mouseout", resetTransform);
+    aboutCard.addEventListener("mousedown", () => {
+      aboutCard.style.transform = "perspective(900px) scale(0.9) rotateX(0) rotateY(0)";
+    });
+    aboutCard.addEventListener("mouseup", () => {
+      aboutCard.style.transform = "perspective(900px) scale(1.1) rotateX(0) rotateY(0)";
+    });
+
+    return () => {
+      aboutCard.removeEventListener("mousemove", handleMove);
+      aboutCard.removeEventListener("mouseout", resetTransform);
+    };
+  });
+
+
+  
 </script>
 
 <style>
+  .aboutCard {
+    transition: transform 0.1s, box-shadow 0.1s;
+  }
+  .aboutCard:hover {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+  }
+
   @media (max-width: 640px){
   .aboutCard{
     margin-top: 5em;
     scale: .7;
   }
-
-  
   }
+
+  @keyframes modalPopup {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal {
+  animation: modalPopup 0.3s ease-out forwards;
+}
+
+.memberCard::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(-45deg, hsla(0, 0%, 0%, 0) 60%, hsla(0, 0%, 100%, 0.5) 70%, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0) 100% );
+  transition:650ms ease;
+  background-size: 250% 250%, 100% 100%;
+  background-repeat:no-repeat;
+  background-position: -500px -500px, 0 0;
+}
+
+.memberCard:hover{
+  cursor:pointer;
+}
+
+.memberCard:hover::before{
+  background-position: 280px 280px, 0 0;
+}
+
 </style>
 
 <section class="relative w-full h-[40vh] sm:h-[60vh] md:h-[80vh] bg-zinc-900">
@@ -79,14 +159,25 @@
       />
     </div>
   </div>
-  <div class="absolute inset-0 flex items-center justify-center text-center text-white z-10 px-4">
-    <div class="aboutCard p-4  bg-black bg-opacity-75 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:border-4 hover:border-red-800 mt-4 ">
-      <img src="/images/logo.png" alt="Stage Fright Logo" class=" h-24 sm:h-32 md:h-40 mx-auto" />
-      <p class="mt-2 text-sm sm:text-base md:text-xl font-medium text-zinc-300 uppercase">
-        Rocking the world with fresh sounds and energy-packed performances
-      </p>
-    </div>
+<div
+  class="absolute inset-0 flex items-center justify-center text-center text-white z-10 px-4"
+>
+  <div
+    bind:this={aboutCard}
+    class="aboutCard p-4 bg-black bg-opacity-75 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:border-4 hover:border-red-800 mt-4"
+  >
+    <img
+      src="/images/logo.png"
+      alt="Stage Fright Logo"
+      class="h-24 sm:h-32 md:h-40 mx-auto"
+    />
+    <p
+      class="mt-2 text-sm sm:text-base md:text-xl font-medium text-zinc-300 uppercase"
+    >
+      Rocking the world with fresh sounds and energy-packed performances
+    </p>
   </div>
+</div>
 </section>
 
 
@@ -102,7 +193,7 @@
   <img
     src={member.image}
     alt={member.name}
-    class="w-28 h-28 md:w-32 md:h-32 rounded-full mx-auto mb-4 object-cover border-4 border-zinc-700"
+    class=" w-28 h-28 md:w-32 md:h-32 rounded-full mx-auto mb-4 object-cover border-4 border-zinc-700"
   />
   <h3 class="text-lg font-semibold text-red-500">{member.name}</h3>
   <p class="text-sm text-zinc-400">{member.role}</p>
@@ -124,33 +215,33 @@
 </section>
 
 {#if selectedMember}
-  <div class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 px-4">
-    <div class="bg-gradient-to-t from-zinc-800 to-zinc-900 p-8 sm:p-10 rounded-xl shadow-xl max-w-lg w-full relative border border-zinc-700">
-      <button
-        on:click={closeModal}
-        class="absolute top-3 right-3 text-2xl text-zinc-400 hover:text-white transition transform hover:scale-110"
-      >
-        &times;
+<div class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 px-4">
+  <div class="modal bg-gradient-to-t from-zinc-800 to-zinc-900 p-8 sm:p-10 rounded-xl shadow-xl max-w-lg w-full relative border border-zinc-700">
+    <button
+      on:click={closeModal}
+      class="absolute top-3 right-3 text-2xl text-zinc-400 hover:text-white transition transform hover:scale-110"
+    >
+      &times;
+    </button>
+    
+    <div class="text-center">
+      <img
+        src={selectedMember.image}
+        alt={selectedMember.name}
+        class="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full mx-auto mb-6 object-cover border-4 border-red-500 shadow-md"
+      />
+      <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-red-500">{selectedMember.name}</h2>
+      <h3 class="text-sm sm:text-base text-zinc-400 mt-2">{selectedMember.role}</h3>
+      <p class="text-sm sm:text-base text-zinc-300 mt-4 leading-relaxed">
+        {selectedMember.bio}
+      </p>
+    </div>
+    
+    <div class="mt-8 flex justify-center space-x-4">
+      <button on:click={closeModal} class="px-4 py-2 bg-zinc-700 text-white rounded-md shadow-md hover:bg-zinc-600 transition">
+        Close
       </button>
-      
-      <div class="text-center">
-        <img
-          src={selectedMember.image}
-          alt={selectedMember.name}
-          class="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full mx-auto mb-6 object-cover border-4 border-red-500 shadow-md"
-        />
-        <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-red-500">{selectedMember.name}</h2>
-        <h3 class="text-sm sm:text-base text-zinc-400 mt-2">{selectedMember.role}</h3>
-        <p class="text-sm sm:text-base text-zinc-300 mt-4 leading-relaxed">
-          {selectedMember.bio}
-        </p>
-      </div>
-      
-      <div class="mt-8 flex justify-center space-x-4">
-        <button on:click={closeModal} class="px-4 py-2 bg-zinc-700 text-white rounded-md shadow-md hover:bg-zinc-600 transition">
-          Close
-        </button>
-      </div>
     </div>
   </div>
+</div>
 {/if}
