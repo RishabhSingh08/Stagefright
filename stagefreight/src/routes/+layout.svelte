@@ -49,9 +49,6 @@
 </style>
 
 
-<head>
-  <script id="oada_ma_toolbar_script">var oada_ma_license_key="KAW9xaS4HdAeySRHh4qTZQ9oOB0Bolxa2y11zMUAFDc5BPR1vk";var oada_ma_license_url="https://api.maxaccess.io/scripts/toolbar/KAW9xaS4HdAeySRHh4qTZQ9oOB0Bolxa2y11zMUAFDc5BPR1vk";(function(s,o,g){a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.src=g;a.setAttribute("async","");a.setAttribute("type","text/javascript");a.setAttribute("crossorigin","anonymous");m.parentNode.insertBefore(a,m)})(document,"script",oada_ma_license_url+oada_ma_license_key);</script>
-</head>
 
 <nav class="fixed top-0 left-0 w-full bg-black text-white shadow-md z-50 border-b border-white">
   <div class="container mx-auto px-4 py-2 flex justify-between items-center">
