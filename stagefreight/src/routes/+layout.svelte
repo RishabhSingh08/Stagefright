@@ -90,17 +90,14 @@
       <img src="/images/logo.png" alt="Stage Fright Logo" class="h-12" />
     </a>
     <div class="text-xs sm:text-sm text-center lg:text-left sm:block">
-      <!-- Mobile Text -->
       <p class="sm:hidden">
         Rishabh Singh & Kaushal Ganapur | Plano West High School BPA | Stage Fright | Plano, Texas | 2024
       </p>
-      <!-- Larger screen text -->
       <p class="hidden sm:block">
         Plano West High School BPA | Stage Fright | Plano, Texas | 2024
       </p>
     </div>
     <div class="text-xs sm:text-sm text-center lg:text-left sm:block">
-      <!-- Larger screen text -->
       <p class="hidden sm:block">Rishabh Singh & Kaushal Ganapur</p>
     </div>
   </footer>
