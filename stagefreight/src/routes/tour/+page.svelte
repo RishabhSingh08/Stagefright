@@ -11,14 +11,14 @@
       date: "February 10, 2024",
       city: "Los Angeles, CA",
       venue: "The Roxy Theatre",
-      ticketUrl: "https://www.ticketmaster.com/discover/concerts/losangeles",
+      ticketUrl: "https://www.ticketmaster.com/search?q=los+angeles",
       details: "Stage Fright returns to LA! With special guests and new music, this show will be a blast."
     },
     {
       date: "March 5, 2024",
       city: "New York, NY",
       venue: "Madison Square Garden",
-      ticketUrl: "https://www.ticketmaster.com/discover/concerts/newyork",
+      ticketUrl: "https://www.ticketmaster.com/search?q=new+york",
       details: "The big stage in New York awaits! Come experience Stage Fright live at one of the most iconic venues in the world."
     },
     {
@@ -32,7 +32,7 @@
       date: "May 15, 2024",
       city: "San Francisco, CA",
       venue: "The Fillmore",
-      ticketUrl: "https://www.ticketmaster.com/discover/concerts/sanfrancisco",
+      ticketUrl: "https://www.ticketmaster.com/search?q=san+francisco",
       details: "Stage Fright brings their electrifying live show to the Fillmore. You won't want to miss this one!"
     },
     {
