@@ -4,7 +4,7 @@
     {
       name: "Alex Carter",
       role: "Lead Vocals and Rhythm Guitar",
-      bio: "Alex Carter, born and raised in Austin, TX, is the dynamic lead vocalist and rhythm guitarist of Stage Fright. Growing up in a musically rich environment, Alex was introduced to the world of music at a young age, learning guitar from his father, who was a local blues musician. Over the years, Alex has honed his skills, blending his love for classic rock with modern influences. Known for his powerful voice and energetic stage presence, Alex's passion for songwriting and performing is the heart of Stage Fright's sound. He is currently based in Portland, OR, where he continues to shape the band's direction with his creative input.",
+      bio: "Alex Carter, born and raised in Austin, TX, is the dynamic lead vocalist and rhythm guitarist of Stage Fright. Growing up in a musically rich environment, Alex was introduced to the world of music at a young age, learning guitar from his father, who was a local blues musician. Over the years, Alex has honed his skills, blending his love for classic rock with modern influences. Known for his powerful voice and energetic stage presence, Alex's passion for songwriting and performing is the heart of Stage Fright's sound. He is currently based in Austin, TX, where he continues to shape the band's direction with his creative input.",
       image: "https://xsgames.co/randomusers/assets/avatars/male/20.jpg"
     },
     {
@@ -16,13 +16,13 @@
     {
       name: "Ethan Brooks",
       role: "Bass Guitar",
-      bio: "Ethan Brooks, originally from Seattle, WA, is the solid backbone of Stage Fright as the bass guitarist. With a deep passion for music that started in his teenage years, Ethan initially picked up the guitar before transitioning to bass, where he found his true calling. After relocating to Portland, OR, Ethan met Alex and began jamming, which led to the formation of Stage Fright. Known for his steady grooves and melodic basslines, Ethan's contributions are integral to the band's sound, adding depth and rhythm that anchor their music. Ethan is also a songwriter and often contributes to the band’s original compositions, adding his own unique flavor to the mix.",
+      bio: "Ethan Brooks, originally from Seattle, WA, is the solid backbone of Stage Fright as the bass guitarist. With a deep passion for music that started in his teenage years, Ethan initially picked up the guitar before transitioning to bass, where he found his true calling. After meeting up with Ethan through school, it led to the formation of Stage Fright. Known for his steady grooves and melodic basslines, Ethan's contributions are integral to the band's sound, adding depth and rhythm that anchor their music. Ethan is also a songwriter and often contributes to the band’s original compositions, adding his own unique flavor to the mix.",
       image: "https://xsgames.co/randomusers/assets/avatars/male/10.jpg"
     },
     {
       name: "Jenna Anderson",
       role: "Drums and Percussion",
-      bio: "Jenna Anderson, hailing from Chicago, IL, is the powerhouse drummer and percussionist of Stage Fright. Growing up in a family of musicians, Jenna was always surrounded by music, and by the age of 12, she was playing drums in her school band. Her love for rhythm grew as she explored different styles, from jazz to punk rock, which now influences her energetic and versatile drumming style. After moving to Portland, OR, Jenna joined Stage Fright, where her precision and intensity behind the kit became a defining feature of their live performances. Jenna’s enthusiasm for experimenting with new sounds keeps the band's music fresh and innovative, driving their sound forward with every beat.",
+      bio: "Jenna Anderson, hailing from Chicago, IL, is the powerhouse drummer and percussionist of Stage Fright. Growing up in a family of musicians, Jenna was always surrounded by music, and by the age of 12, she was playing drums in her school band. Her love for rhythm grew as she explored different styles, from jazz to punk rock, which now influences her energetic and versatile drumming style. After moving to Austin, TX, Jenna joined Stage Fright, where her precision and intensity behind the kit became a defining feature of their live performances. Jenna’s enthusiasm for experimenting with new sounds keeps the band's music fresh and innovative, driving their sound forward with every beat.",
       image: "https://xsgames.co/randomusers/assets/avatars/female/2.jpg"
     }
   ];
